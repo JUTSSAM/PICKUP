@@ -1,5 +1,6 @@
 <?php
 
+header("Content-Type: text/html;charset=utf-8");
 require_once 'index.php';
 require_once 'config.php';
 
@@ -34,5 +35,5 @@ if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['c
 	
 }
 
-	
+
 ?>
