@@ -9,8 +9,9 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
         // echo "数据库连接成功<br>";
         }
 
-        mysql_query("set names utf8");
+mysql_query("set names utf8");
 
+$_POST['keyword'];
 $consult = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
 $row = mysql_fetch_array($consult);
 $stuid = $_POST['stuid'];
