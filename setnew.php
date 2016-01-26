@@ -1,9 +1,5 @@
 <?php
 
-
-
-
-
 require_once 'index.php';
 require_once 'config.php';
 
@@ -16,6 +12,27 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	echo "数据库连接成功<br>";
 	}
 
+mysql_query("set names utf8");
 
+echo "发布信息如下：<br>";
+echo "课程名称:".$_POST['classname']."<br>";
+echo "教师姓名:".$_POST['tname']."<br>";
+	$classname = $_POST['classname'];
+	$tname = $_POST['tname'];
+	$keyword = rand(100000,999999);
+	$time = time();
 
+if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['class'])){
+	die("unvalid input<br>");
+}else{
+	if(!$result = mysql_query("INSERT INTO datas (classname,tname,keyword,datetime) VALUES ('$_POST[classname]','$_POST[tname]','$keyword',$time);"))
+	{
+		die('Error'.mysql_error().'<br>');
+	}else{
+		echo "随机口令:".$keyword."<br>";
+	}
+	
+}
+
+	
 ?>
