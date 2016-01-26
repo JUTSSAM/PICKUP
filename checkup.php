@@ -6,9 +6,9 @@
 	mysql_query("set names utf8");
 	
 	$consult = mysql_query("SELECT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
+	echo "到课信息如下：<br>";
 	while ( $result = mysql_fetch_array($consult)) {
-		echo "到课信息如下：";
-		echo $result[0]."|".$result[1]."|".$result[2]."<br>";
+		echo $result[0]."|".$result[1]."<br>";
 		 // foreach ($result as $data) {
 			// echo $data;		
 			// }
