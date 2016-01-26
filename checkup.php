@@ -7,10 +7,12 @@
 	
 	$consult = mysql_query("SELECT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
 	while ( $result = mysql_fetch_array($consult)) {
+		echo "到课信息如下：";
+		echo $row[0]."|".$row[1]."|".$row[2]."<br>";
 		 // foreach ($result as $data) {
 			// echo $data;		
 			// }
-			print_r($result);
+			// print_r($result);
 		}
 
 
