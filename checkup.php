@@ -4,6 +4,6 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	$consult = mysql_query("SELECT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
 
-
+	
 
 ?>
