@@ -14,12 +14,12 @@ $_PICK['StudentsTable'] = 'Stu';
 function dbcon()
 {
 
-if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$_PICK['db_password'])||!@mysql_select_db($_PICK['db_database']))
+if(!@mysql_connect($_PICK[ 'db_server' ],$_PICK[ 'db_user' ],$_PICK[ 'db_password'])||!@mysql_select_db($_PICK['db_database']))
 {
-        die('database connect error');
+	die('database connect error');
 }else{
-        echo "database connected<br>";
-        }
+	echo "数据库连接成功<br>";
+	}
 mysql_query("set names utf8");
 }
 
