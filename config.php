@@ -20,7 +20,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 }else{
         echo "database connected<br>";
         }
-
+mysql_query("set names utf8");
 }
 
 function StrCheck($str){

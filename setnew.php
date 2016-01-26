@@ -1,7 +1,6 @@
 <?php
 
 header("Content-Type: text/html;charset=utf-8");
-require_once 'index.php';
 require_once 'config.php';
 
 $con = mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);if(!$con){ die('could not connect:'.mysql_error()); }mysql_select_db(SAE_MYSQL_DB,$con);
@@ -10,7 +9,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 {
 	die('数据库连接失败<br>');
 }else{
-	echo "数据库连接成功<br>";
+	// echo "数据库连接成功<br>";
 	}
 
 	mysql_query("set names utf8");
