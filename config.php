@@ -1,6 +1,6 @@
 <?php
 
-
+header("Content-Type: text/html;charset=utf-8");
 
 $_PICK = array();
 $_PICK['db_server'] = SAE_MYSQL_HOST_M;
