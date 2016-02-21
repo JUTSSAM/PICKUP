@@ -15,16 +15,24 @@ if($row){
     // echo "请核对信息<br>";
     // //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
     // echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
-    $arr = array('tName' => $row[2] ,
-    	'className' => $row[1]
+    	$arr = array(
+    	'code' =>1, 
+    	'msg' =>"点名成功请核对信息",
+    	'obj'=>(
+    		'tName' => $row[2] ,
+    		'className' => $row[1]
+    		)
     	);
-    $strr = json_encode($arr);
-    $result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
+  	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 	if ($result){
-    		echo $arr;
+    	$strr = json_encode($arr);	
 		}	
 }else{
-	echo 0;
+	$arr = (
+		'code'=>0,
+		'msg'=>'点名失败请重试'
+		)
+	$strr = json_encode($arr);
 }
-
+	echo $strr;
 ?>
