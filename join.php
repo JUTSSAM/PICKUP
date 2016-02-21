@@ -18,6 +18,7 @@ $row = mysql_fetch_array($consult);
 $stuid = $_POST['stuid'];
 $stuname = $_POST['stuname'];
 $keyword = $_POST['keyword'];
+
 if($row){
     echo "请核对信息<br>";
     //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
@@ -29,7 +30,6 @@ if($row){
 		}	
 }else{
     die( "输入有误，请核对重新输入<br>");
-    header("join.html");
 }
 
 ?>
