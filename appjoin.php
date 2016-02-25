@@ -25,14 +25,19 @@ if($row){
     	);
   	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 	if ($result){
-    	//$strr = json_encode($arr);	
+    	$strr = json_encode($arr);	
+	echo $strr;
 	}else{
 	$arr = (
 		'code'=>0,
 		'msg'=>'点名失败请重试'
 		)
-	//$strr = json_encode($arr);
+	$strr = json_encode($arr);
+	echo $strr;
+	}
+}else{
+	die("Wrong input!");
+	
 }
-	var_dump($strr);
-	//echo $strr;
+echo 0;
 ?>
