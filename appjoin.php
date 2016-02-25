@@ -26,8 +26,7 @@ if($row){
   	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 	if ($result){
     	$strr = json_encode($arr);	
-		}	
-}else{
+		}else{
 	$arr = (
 		'code'=>0,
 		'msg'=>'点名失败请重试'
