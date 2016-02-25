@@ -38,7 +38,11 @@ if($row){
 	//var_dump($arr);
 	}
 }else{
-	die("Wrong input!");
-	
+	$arr = array(
+		"code" => 0,
+		"msg" =>"口令错误"
+		);
+	$strr = json_encode($arr);
+	echo $strr;
 }
 ?>
