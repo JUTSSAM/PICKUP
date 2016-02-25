@@ -29,9 +29,9 @@ if($row){
 	//echo $strr;
 	var_dump($arr);
 	}else{
-	$arr = (
-		"code"=> 0,
-		"msg"=>'点名失败请重试'
+	$arr = array(
+		"code" => 0,
+		"msg" =>'点名失败请重试'
 		)
 	// $strr = json_encode($arr);
 	// echo $strr;
