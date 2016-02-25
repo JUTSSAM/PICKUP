@@ -18,11 +18,11 @@ if($row){
   	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 	if ($result){
 	$arr = array(
-    	'code' =>1, 
-    	'msg' =>"点名成功请核对信息",
-    	'obj'=>(
-    		'tName' => $row[2] ,
-    		'className' => $row[1]
+    	"code" => 1, 
+    	"msg" =>"点名成功请核对信息",
+    	"obj" => array(
+    		"tName" => $row[2] ,
+    		"className" => $row[1]
     		)
     	);
     	//$strr = json_encode($arr);	
@@ -30,8 +30,8 @@ if($row){
 	var_dump($arr);
 	}else{
 	$arr = (
-		'code'=>0,
-		'msg'=>'点名失败请重试'
+		"code"=> 0,
+		"msg"=>'点名失败请重试'
 		)
 	// $strr = json_encode($arr);
 	// echo $strr;
