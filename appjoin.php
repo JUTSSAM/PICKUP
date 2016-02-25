@@ -15,7 +15,9 @@ if($row){
     // echo "请核对信息<br>";
     // //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
     // echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
-    	$arr = array(
+  	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
+	if ($result){
+	$arr = array(
     	'code' =>1, 
     	'msg' =>"点名成功请核对信息",
     	'obj'=>(
@@ -23,8 +25,6 @@ if($row){
     		'className' => $row[1]
     		)
     	);
-  	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
-	if ($result){
     	$strr = json_encode($arr);	
 	echo $strr;
 	}else{
@@ -39,5 +39,4 @@ if($row){
 	die("Wrong input!");
 	
 }
-echo 0;
 ?>
