@@ -16,7 +16,7 @@ if($row){
     // //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
     // echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
   	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stuid','$stuname',$keyword);");
-  	var_dump($result);
+  	//var_dump($result);
 	if ($result){
 	$arr = array(
     	"code" => 1, 
