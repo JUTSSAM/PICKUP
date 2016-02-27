@@ -11,6 +11,7 @@ $row = mysql_fetch_array($consult);
 $stuid = $_POST['stuId'];
 $stuname = $_POST['stuName'];
 $keyword = $_POST['keyword'];
+var_dump($stuid);
 if($row){
     // echo "请核对信息<br>";
     // //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
