@@ -9,7 +9,7 @@ mysql_query("set names utf8");
 $consult_keyword = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
 var_dump($consult_keyword);
 $class_info = mysql_fetch_array($consult_keyword);
-$consult_stu = mysql_query("SELECT `stu_id`,`nfc_id`,`stu_name`FROM `stu2` WHERE `nfc_id` =\'".$_POST['nfcId']."\'",$con);
+$consult_stu = mysql_query("SELECT `stu_id`,`nfc_id`,`stu_name`FROM `stu2` WHERE `nfc_id` ='.$_POST['nfcId'].'",$con);
 var_dump($consult_stu);
 $stu_info = mysql_fetch_array($consult_stu);
 
