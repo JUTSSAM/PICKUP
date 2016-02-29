@@ -20,7 +20,9 @@ if (!($stuid&&$stuname&&$keyword)) {
 		"msg"=>"输入有误，请检查！");
 	$strr = json_encode($arr);
 	echo $strr;		
-	}elseif($row){
+}else
+{
+if($row){
 	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stuid','$stuname',$keyword);");
 	if ($result){
 	$arr = array(
@@ -48,5 +50,6 @@ if (!($stuid&&$stuname&&$keyword)) {
 		);
 	$strr = json_encode($arr);
 	echo $strr;
+}
 }
 ?>
