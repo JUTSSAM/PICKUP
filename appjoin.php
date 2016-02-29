@@ -14,7 +14,7 @@ $row = mysql_fetch_array($consult_keyword);
 	var_dump($stuid);
 	var_dump($stuname);
 	var_dump($keyword);
-if (!($stuid||$stuname||$keyword)) {
+if (!($stuid&&$stuname&&$keyword)) {
 	$arr = array(
 		"code"=>0,
 		"msg"=>"输入有误，请检查！");
