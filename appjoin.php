@@ -15,7 +15,7 @@
 	$nfcid = $_POST['nfcId'];
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
-//
+
 	if (!$stu_info)
 	{
 		if (!($stuid&&$stuname&&$keyword)) {
@@ -25,7 +25,7 @@
 		$strr = json_encode($arr);
 		echo $strr;		
 		}else{
-			$register_result = mysql_query("INSERT INTO `stu2`(`stu_id`,`nfc_id`,`stu_name`)VALUES('$stuid','$nfcid','stuname');");
+			$register_result = mysql_query("INSERT INTO `stu2`(`stu_id`,`nfc_id`,`stu_name`)VALUES('$stuid','$nfcid','$stuname');");
 			if ($register_result) {
 				$arr = array(
 					"code" => 2, 
@@ -45,7 +45,7 @@
 			if ($result){
 				$arr = array(
 				    	"code" => 1, 
-				    	"msg" =>"点名成功,请核对信息:",
+				    	"msg" =>"点名成功，请核对信息：",
 				    	"obj" => array(
 				    		"tName" => $class_info[2] ,
 				    		"className" => $class_info[1]
@@ -56,7 +56,7 @@
 			}else{
 				$arr = array(
 					"code" => 0,
-					"msg" =>"点名失败请重试"
+					"msg" =>"点名失败,请重试："
 					);
 				$strr = json_encode($arr);
 				echo $strr;

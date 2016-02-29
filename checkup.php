@@ -5,7 +5,7 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 	
-	$consult = mysql_query("SELECT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
+	$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
 	echo "到课信息如下：<br>";
 	while ( $result = mysql_fetch_array($consult)) {
 		echo $result[0]."|".$result[1]."<br>";
