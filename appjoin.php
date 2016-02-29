@@ -11,6 +11,13 @@ $row = mysql_fetch_array($consult_keyword);
 	$stuid = $_POST['stuId'];
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
+if (!($stuid||$stuname||$keyword)) {
+	$arr = array(
+		"code"=>0,
+		"msg"=>"");
+	$strr = json_encode($arr);
+	echo $strr;		
+	}
 if($row){
 	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stuid','$stuname',$keyword);");
 	if ($result){
