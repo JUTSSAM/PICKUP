@@ -8,12 +8,14 @@
 	$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
 	echo "到课信息如下：<br>";
 	while ( $result = mysql_fetch_array($consult)) {
+	echo "<tr>";
 		echo $result[0]."|".$result[1]."<br>";
 		 // foreach ($result as $data) {
 			// echo $data;		
 			// }
 			// print_r($result);
 		}
+	echo "</tr>"
 
 
 ?>
