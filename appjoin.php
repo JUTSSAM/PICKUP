@@ -14,7 +14,7 @@ $row = mysql_fetch_array($consult_keyword);
 if (!($stuid||$stuname||$keyword)) {
 	$arr = array(
 		"code"=>0,
-		"msg"=>"");
+		"msg"=>"输入有误，请检查！");
 	$strr = json_encode($arr);
 	echo $strr;		
 	}elseif($row){
