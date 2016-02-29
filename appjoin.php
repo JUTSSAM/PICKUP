@@ -11,6 +11,9 @@ $row = mysql_fetch_array($consult_keyword);
 	$stuid = $_POST['stuId'];
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
+	var_dump($stuid);
+	var_dump($stuname);
+	var_dump($keyword);
 if (!($stuid||$stuname||$keyword)) {
 	$arr = array(
 		"code"=>0,
