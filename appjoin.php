@@ -41,8 +41,8 @@
 		}
 	}else{
 		if($class_info){
-			$stu2id = $consult_stu['stu_id'];
-			$stu2name = $consult_stu['stu_name'];
+			$stu2id = $stu_info['0'];
+			$stu2name = $consult_stu['2'];
 			var_dump($consult_stu['stu_id']);
 			var_dump($consult_stu['stu_name']);
 			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
