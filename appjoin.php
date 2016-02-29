@@ -43,8 +43,8 @@
 		if($class_info){
 			$stu2id = $consult_stu['stu_id'];
 			$stu2name = $consult_stu['stu_name'];
-			var_dump($stu2id);
-			var_dump($stu2name);
+			var_dump($consult_stu['stu_id']);
+			var_dump($consult_stu['stu_name']);
 			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
 			if ($result){
 				$arr = array(
