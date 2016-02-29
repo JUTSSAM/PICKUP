@@ -41,7 +41,9 @@
 		}
 	}else{
 		if($class_info){
-			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stuid','$stuname',$keyword);");
+			$stu2id = $consult_stu['0'];
+			$stu2name = $consult_stu['2'];
+			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
 			if ($result){
 				$arr = array(
 				    	"code" => 1, 
