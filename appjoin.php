@@ -17,8 +17,7 @@ if (!($stuid||$stuname||$keyword)) {
 		"msg"=>"");
 	$strr = json_encode($arr);
 	echo $strr;		
-	}
-if($row){
+	}elseif($row){
 	$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stuid','$stuname',$keyword);");
 	if ($result){
 	$arr = array(
