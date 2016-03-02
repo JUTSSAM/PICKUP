@@ -16,7 +16,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$keyword = rand(100000,999999);
 	$time = time();
 
-if (isset($_REQUEST)) {
+if (isset($_REQUEST['check'])) {
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
 	}else{
