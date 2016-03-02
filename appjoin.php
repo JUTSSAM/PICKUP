@@ -21,7 +21,7 @@
 		if (!($stuid&&$stuname&&$keyword)) {
 		$arr = array(
 			"code"=>1,
-			"msg"=>"输入信息不完整，请检查！"
+			//"msg"=>"输入信息不完整，请检查！"
 			);
 		$strr = json_encode($arr);
 		echo $strr;		
@@ -30,7 +30,7 @@
 			if ($register_result) {
 				$arr = array(
 					"code" => 2, 
-					"msg"=>"注册成功，请核对信息：",
+					//"msg"=>"注册成功，请核对信息：",
 					"obj"=>array(
 						"stuId"=>$stuid,
 						"stuName"=>$stuname
@@ -50,7 +50,7 @@
 			if ($result){
 				$arr = array(
 				    	"code" => 3, 
-				    	"msg" =>"点名成功，请核对信息：",
+				    	//"msg" =>"点名成功，请核对信息：",
 				    	"obj" => array(
 				    		"tName" => $class_info[2] ,
 				    		"className" => $class_info[1]
@@ -61,7 +61,7 @@
 			}else{
 				$arr = array(
 					"code" => 4,
-					"msg" =>"点名失败,请重试："
+					//"msg" =>"点名失败,请重试："
 					);
 				$strr = json_encode($arr);
 				echo $strr;
@@ -69,7 +69,7 @@
 		}else{
 			$arr = array(
 				"code" => 0,
-				"msg" =>"口令错误"
+				//"msg" =>"口令错误"
 				);
 			$strr = json_encode($arr);
 			echo $strr;
