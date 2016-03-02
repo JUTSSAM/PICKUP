@@ -20,8 +20,8 @@
 	{
 		if (!($stuid&&$stuname&&$keyword)) {
 		$arr = array(
-			"code"=>0,
-			"msg"=>"输入有误，请检查！");
+			"code"=>1,
+			"msg"=>"输入信息不完整，请检查！");
 		$strr = json_encode($arr);
 		echo $strr;		
 		}else{
@@ -48,7 +48,7 @@
 			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
 			if ($result){
 				$arr = array(
-				    	"code" => 1, 
+				    	"code" => 3, 
 				    	"msg" =>"点名成功，请核对信息：",
 				    	"obj" => array(
 				    		"tName" => $class_info[2] ,
@@ -59,7 +59,7 @@
 				echo $strr;
 			}else{
 				$arr = array(
-					"code" => 0,
+					"code" => 4,
 					"msg" =>"点名失败,请重试："
 					);
 				$strr = json_encode($arr);
