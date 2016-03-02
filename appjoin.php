@@ -6,7 +6,8 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 
-	$consult_keyword = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
+	$keyword = $_POST['keyword'];
+	$consult_keyword = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$keyword."'",$con);
 	$class_info = mysql_fetch_array($consult_keyword);
 	$nfcid = $_POST['nfcId'];
 	$nfcid = substr($nfcid,0,8);
@@ -15,9 +16,8 @@
 	$stu_info = mysql_fetch_array($consult_stu);
 
 	$stuid = $_POST['stuId'];
-	
 	$stuname = $_POST['stuName'];
-	$keyword = $_POST['keyword'];
+	
 
 
 	if (!$stu_info)
