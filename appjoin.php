@@ -49,6 +49,11 @@
 			$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stu2id."';",$con);
 			$repeat_info = mysql_fetch_array($result_repeat);
 			var_dump($repeat_info);
+			
+			if ($repeat_info) {
+				die();	
+			}
+
 			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
 			if ($result){
 				$arr = array(
