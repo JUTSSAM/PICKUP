@@ -8,14 +8,14 @@
 
 	$consult_keyword = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
 	$class_info = mysql_fetch_array($consult_keyword);
-	$stuid = $_POST['stuId'];
-	$stuid = substr($stuid,0,8);
-	var_dump($stuid);
+	$nfcid = $_POST['nfcId'];
+	$nfcid = substr($nfcid,0,8);
+	var_dump($nfcid);
 	$consult_stu = mysql_query("SELECT `stu_id`,`nfc_id`,`stu_name`FROM `stu2` WHERE `nfc_id` ='".$_POST['nfcId']."'",$con);
 	$stu_info = mysql_fetch_array($consult_stu);
 
+	$stuid = $_POST['stuId'];
 	
-	$nfcid = $_POST['nfcId'];
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
 
