@@ -4,9 +4,9 @@
 	$con = mysql_connect($_PICK[ 'db_server' ].':'.$_PICK['db_port'],$_PICK[ 'db_user' ],$_PICK[ 'db_password']);
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
-	if (isset($_POST['check'])) {
+	if (isset($_REQUEST['check'])) {
 		# code...
-		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_POST['keyword']."'",$con);
+		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_REQUEST['keyword']."'",$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
 		echo "<tr>";
