@@ -16,7 +16,7 @@
 				// }
 				// print_r($result);
 			}
-		echo "</tr>"
+		echo "</tr>";
 	}
 
 ?>
