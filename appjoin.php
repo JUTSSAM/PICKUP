@@ -46,9 +46,6 @@
 		if($class_info){
 			$stu2id = $stu_info['0'];
 			$stu2name = $stu_info['2'];
-			var_dump($keyword);
-			var_dump($stu2name);
-			var_dump($stu2id);
 			$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stu2id."';",$con);
 			$repeat_info = mysql_fetch_array($result_repeat);
 			var_dump($repeat_info);
