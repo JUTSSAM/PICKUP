@@ -16,23 +16,25 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$keyword = rand(100000,999999);
 	$time = time();
 
-if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['class'])){
-	die("不合法的输入<br>");
-}else{
-	if(!$result = mysql_query("INSERT INTO datas (classname,tname,keyword,datetime) VALUES ('$_POST[classname]','$_POST[tname]','$keyword',$time);"))
-	{
-		die('Error'.mysql_error().'<br>');
+if (isset($_REQUEST)) {
+	# code...
+	if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['class'])){
+		die("不合法的输入<br>");
 	}else{
-		echo "发布信息如下：<br>";
-		echo "课程名称:".$_POST['classname']."<br>";
-		echo "教师姓名:".$_POST['tname']."<br>";
-		echo "随机口令:".$keyword."<br>";
+		if(!$result = mysql_query("INSERT INTO datas (classname,tname,keyword,datetime) VALUES ('$_POST[classname]','$_POST[tname]','$keyword',$time);"))
+		{
+			die('Error'.mysql_error().'<br>');
+		}else{
+			echo "发布信息如下：<br>";
+			echo "课程名称:".$_POST['classname']."<br>";
+			echo "教师姓名:".$_POST['tname']."<br>";
+			echo "随机口令:".$keyword."<br>";
+			
+		}
 		
 	}
-	
+
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>
