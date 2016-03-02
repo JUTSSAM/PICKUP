@@ -21,7 +21,8 @@
 		if (!($stuid&&$stuname&&$keyword)) {
 		$arr = array(
 			"code"=>1,
-			"msg"=>"输入信息不完整，请检查！");
+			"msg"=>"输入信息不完整，请检查！"
+			);
 		$strr = json_encode($arr);
 		echo $strr;		
 		}else{
