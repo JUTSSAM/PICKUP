@@ -11,7 +11,7 @@
 	$class_info = mysql_fetch_array($consult_keyword);
 	$nfcid = $_POST['nfcId'];
 	$nfcid = substr($nfcid,0,8);
-	var_dump($nfcid);
+
 	$consult_stu = mysql_query("SELECT `stu_id`,`nfc_id`,`stu_name`FROM `stu2` WHERE `nfc_id` ='".$nfcid."'",$con);
 	$stu_info = mysql_fetch_array($consult_stu);
 
@@ -48,8 +48,7 @@
 			$stu2name = $stu_info['2'];
 			$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stu2id."';",$con);
 			$repeat_info = mysql_fetch_array($result_repeat);
-			var_dump($repeat_info);
-			
+
 			if ($repeat_info) {
 				die();	
 			}
