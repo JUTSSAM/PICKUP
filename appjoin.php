@@ -31,10 +31,10 @@
 				$arr = array(
 					"code" => 2, 
 					//"msg"=>"注册成功，请核对信息：",
-					"obj"=>array(
-						"stuId"=>$stuid,
-						"stuName"=>$stuname
-						)
+					// "obj"=>array(
+					// 	"stuId"=>$stuid,
+					// 	"stuName"=>$stuname
+					// 	)
 					);
 				$strr = json_encode($arr);
 				echo $strr;
