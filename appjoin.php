@@ -18,7 +18,7 @@
 
 	if (!$stu_info)
 	{
-		if (!($stuid&&$stuname&&$keyword)) {
+		if (!($stuid&&$stuname)) {
 		$arr = array(
 			"code"=>1,
 			//"msg"=>"输入信息不完整，请检查！"
