@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<form action="?check" method="POST" name="Set">
+	<form action="?check" method="post">
 		
 		<!-- 学号:<input type="text" name="stuid" ><br>
 		姓名:<input type="text" name="stuname"><br> -->
@@ -17,6 +17,7 @@
 	
 </body>
 </html>
+
 <?php
 	require_once 'config.php';
 
@@ -24,7 +25,6 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 	if (isset($_REQUEST['check'])) {
-		# code...
 		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_REQUEST['keyword']."'",$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
