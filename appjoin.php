@@ -10,13 +10,14 @@
 	$class_info = mysql_fetch_array($consult_keyword);
 	$consult_stu = mysql_query("SELECT `stu_id`,`nfc_id`,`stu_name`FROM `stu2` WHERE `nfc_id` ='".$_POST['nfcId']."'",$con);
 	$stu_info = mysql_fetch_array($consult_stu);
+	$stu_info = substr($stu_info,0,8);
 
 	$stuid = $_POST['stuId'];
 	$nfcid = $_POST['nfcId'];
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
 
-	
+
 	if (!$stu_info)
 	{
 		if (!($stuid&&$stuname)) {
