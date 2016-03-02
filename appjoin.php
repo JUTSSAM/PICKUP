@@ -16,7 +16,7 @@
 	$stuname = $_POST['stuName'];
 	$keyword = $_POST['keyword'];
 
-	var_dump($stu_info);
+	
 	if (!$stu_info)
 	{
 		if (!($stuid&&$stuname)) {
