@@ -34,3 +34,22 @@ if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['c
 
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta  http-equiv="content-type" content="text/html"  charset="utf8">
+	<title>Set a new pick-up</title>
+</head>
+<body>
+
+	<form action="?check" method="POST">
+		
+		教师姓名:<input type="text" name="tname" ><br>
+		课程姓名:<input type="text" name="classname"><br>
+		<input type="submit" value="submit"><br>
+
+
+	</form>
+
+</body>
+</html>
