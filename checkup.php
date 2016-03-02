@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
- <link rel="stylesheet" href="test.css" type="text/css" media="screen"/>
 <meta charset="UTF-8">
 <title>查询点名情况</title>
 </head>
