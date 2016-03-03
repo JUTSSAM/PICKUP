@@ -7,7 +7,8 @@
 	if (isset($_REQUEST['check'])) {
 		var_dump($_REQUEST['classname']);
 		var_dump($_REQUEST['classid']);
-		$consult_key = mysql_query("SELECT keyword FROM 'datas' WHERE classname = '".$_REQUEST['classname']."' AND classid = ".$_REQUEST['classid'].";");
+		$consult_key = //mysql_query("SELECT keyword FROM 'datas' WHERE classname = '".$_REQUEST['classname']."' AND classid = ".$_REQUEST['classid'].";");
+		mysql_query("SELECT keyword FROM  `datas` WHERE classname =  '".$_REQUEST['classname']."' AND classid =".$_REQUEST['classid']);
 		$result_keyword = mysql_fetch_array($consult_key);
 		var_dump($result_keyword);
 		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$result_keyword."'",$con);
