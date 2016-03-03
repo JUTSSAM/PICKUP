@@ -37,9 +37,12 @@ if (isset($_REQUEST['check'])) {
 
 	$check_result = mysql_query("SELECT `classname` FROM  `datas` WHERE 1;");
 	$check_info = mysql_fetch_array($check_result);
-	echo "<tr>";
+	$check_info2 = mysql_fetch_array($check_result);
+	
 	var_dump($check_info);
-	echo "</tr>";
+	echo "<br>";
+	var_dump($check_info2);
+	echo "<br>";
 
 }
 ?>
