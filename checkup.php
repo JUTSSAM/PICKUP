@@ -14,6 +14,7 @@
 		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$result_keyword."'",$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
+			var_dump($consult);
 		echo "<tr>";
 			echo $result[0]."</tr><tr>".$result[1]."<br>";
 			 // foreach ($result as $data) {
