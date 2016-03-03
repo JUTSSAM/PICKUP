@@ -34,16 +34,22 @@ if (isset($_REQUEST['check'])) {
 	var_dump($classname);
 	var_dump($tname);
 
-	$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."' AND tname ='".$tname."';",$con);
+	@$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."' AND tname ='".$tname."';",$con);
 	var_dump($check_result);
-	$check_info = mysql_fetch_array($check_result);
+	@$check_info = mysql_fetch_array($check_result);
  	var_dump($check_info);
+ 	$classid = $check_info['classid'];
+ 	if ($check_info) {
+ 		$classid = $classid + 1;
+ 	}else{
+ 		$classid = 1;
+ 	}
 
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
 	}else{
 
-		if(!$result = mysql_query("INSERT INTO datas (classname,tname,keyword,datetime) VALUES ('$_REQUEST[classname]','$_REQUEST[tname]','$keyword',$time);"))
+		if(!$result = mysql_query("INSERT INTO datas (classname,tname,classid,keyword,datetime) VALUES ('$_REQUEST[classname]','$_REQUEST[tname]',$classid,'$keyword',$time);"))
 		{
 			die('Error'.mysql_error().'<br>');
 		}else{
