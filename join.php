@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>加入一次课程</title>
-</head>
-<body>
-
-	<form action="?check" method="REQUEST">
-		
-		学号:<input type="text" name="stuid" ><br>
-		姓名:<input type="text" name="stuname"><br>
-        		口令:<input type="text" name="keyword"><br>
-		<input type="submit" value="提交"><br>
-		
-	</form>
-</body>
-</html>
 <?php
 
 require_once 'config.php';
@@ -37,8 +19,6 @@ if (isset($_REQUEST['check'])) {
 	$stuid = $_REQUEST['stuid'];
 	$stuname = $_REQUEST['stuname'];
 	$keyword = $_REQUEST['keyword'];
-	var_dump($row);
-	var_dump($stuname);
 
 	if($row){
 	    echo "请核对信息<br>";
@@ -53,4 +33,21 @@ if (isset($_REQUEST['check'])) {
 	}
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>加入一次课程</title>
+</head>
+<body>
 
+	<form action="?check" method="REQUEST">
+		
+		学号:<input type="text" name="stuid" ><br>
+		姓名:<input type="text" name="stuname"><br>
+        		口令:<input type="text" name="keyword"><br>
+		<input type="submit" value="提交"><br>
+		
+	</form>
+</body>
+</html>
