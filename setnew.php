@@ -16,6 +16,8 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$keyword = rand(100000,999999);
 	$time = time();
 
+	
+
 if (isset($_REQUEST['check'])) {
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
@@ -32,6 +34,12 @@ if (isset($_REQUEST['check'])) {
 		}
 		
 	}
+
+	$check_result = mysql_query("SELECT * FROM  `datas`;");
+	$check_info = mysqli_fetch($check_result);
+	echo "<tr>";
+	var_dump($check_info);
+	echo "</tr>";
 
 }
 ?>
