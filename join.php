@@ -19,9 +19,7 @@ if (isset($_REQUEST['check'])) {
 	$stuid = $_REQUEST['stuid'];
 	$stuname = $_REQUEST['stuname'];
 	$keyword = $_REQUEST['keyword'];
-	var_dump($stuid);
-	var_dump($stuname);
-	var_dump($keyword);
+
 	if($row){
 	    echo "请核对信息<br>";
 	    //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
