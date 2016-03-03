@@ -31,6 +31,8 @@ if (isset($_REQUEST['check'])) {
 
 	$classname = $_REQUEST['classname'];
 	$tname = $_REQUEST['tname'];
+	var_dump($classname);
+	var_dump($tname);
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
 	}else{
