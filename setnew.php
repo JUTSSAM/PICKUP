@@ -35,6 +35,7 @@ if (isset($_REQUEST['check'])) {
 	var_dump($tname);
 
 	$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."'' and tname ='".$tname."';'");
+	var_dump($check_result);
 	$check_info = mysql_fetch_array($check_result);
  	var_dump($check_info);
 
