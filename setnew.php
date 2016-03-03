@@ -63,7 +63,7 @@ if (isset($_REQUEST['check'])) {
 	<form action="?check" method="POST">
 		
 		教师姓名:<input type="text" name="tname" ><br>
-		课程姓名:<input type="text" name="classname"><br>
+		课程名称:<input type="text" name="classname"><br>
 		<input type="submit" value="submit"><br>
 
 

@@ -5,7 +5,10 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 	if (isset($_REQUEST['check'])) {
-		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$_REQUEST['keyword']."'",$con);
+		$consult_key = mysql_query("SELECT keyword FROM 'datas' WHERE classname = '".$_REQUEST['classname']."' and id = '".$_REQUEST['classid']."';";
+		$result_keyword = mysql_fetch_array($consult_key);
+		var_dump($result_keyword);
+		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword='".$result_keyword."'",$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
 		echo "<tr>";
@@ -29,9 +32,9 @@
 
 	<form action="?check" method="post">
 		
-		<!-- 学号:<input type="text" name="stuid" ><br>
-		姓名:<input type="text" name="stuname"><br> -->
-        		口令:<input type="text" name="keyword"><br>
+		课程名称:<input type="text" name="classname"><br>
+		课程节次:<input type="text" name="classid"><br>
+        	<!--口令:<input type="text" name="keyword"><br>-->
 		<input type="submit" value="提交"><br>
 		
 	</form>
