@@ -35,7 +35,7 @@ if (isset($_REQUEST['check'])) {
 		
 	}
 
-	$check_result = mysql_query("SELECT * FROM  `datas`;");
+	$check_result = mysql_query("SELECT `classname` FROM  `datas`;");
 	$check_info = mysql_fetch_array($check_result);
 	echo "<tr>";
 	var_dump($check_info);
