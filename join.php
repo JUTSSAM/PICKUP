@@ -19,7 +19,6 @@ if (isset($_REQUEST['check'])) {
 	$stuid = $_REQUEST['stuid'];
 	$stuname = $_REQUEST['stuname'];
 	$keyword = $_REQUEST['keyword'];
-
 	if($row){
 	    echo "请核对信息<br>";
 	    //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
@@ -41,7 +40,7 @@ if (isset($_REQUEST['check'])) {
 </head>
 <body>
 
-	<form action="?check" method="REQUEST">
+	<form action="?check" method="post">
 		
 		学号:<input type="text" name="stuid" ><br>
 		姓名:<input type="text" name="stuname"><br>
