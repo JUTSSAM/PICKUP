@@ -13,6 +13,7 @@ $con = mysql_connect($_PICK[ 'db_server' ].':'.$_PICK['db_port'],$_PICK[ 'db_use
 $db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 mysql_query("set names utf8");
 
+if (isset($_REQUEST['check'])) {
 $consult = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_REQUEST['keyword']."'",$con);
 $row = mysql_fetch_array($consult);
 $stuid = $_REQUEST['stuid'];
@@ -20,12 +21,11 @@ $stuname = $_REQUEST['stuname'];
 $keyword = $_REQUEST['keyword'];
 var_dump($row);
 var_dump($stuname);
-if (isset($_REQUEST['check'])) {	# code...
+
 	if($row){
 	    echo "请核对信息<br>";
 	    //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
 	    echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
-	    
 	    $result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 		if ($result){
 	    	echo "签到成功！<br>";
