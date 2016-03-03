@@ -17,11 +17,11 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 
 	
 
-	// $check_result = mysql_query("SELECT DISTINCT`classname` FROM  `datas` WHERE 1;");
+	// 
 	// $check_info = mysql_fetch_array($check_result);
 	// $check_info2 = mysql_fetch_array($check_result);
 	// $check_info3 = mysql_fetch_array($check_result);
-	// var_dump($check_info);
+	//
 	// echo "<br>";
 	// var_dump($check_info2);
 	// echo "<br>";
@@ -33,6 +33,11 @@ if (isset($_REQUEST['check'])) {
 	$tname = $_REQUEST['tname'];
 	var_dump($classname);
 	var_dump($tname);
+
+	$check_result = mysql_query("SELECT * FROM  `datas` WHERE classname = ".$classname." and tname =".$tname.";");
+	$check_info = mysql_fetch_array($check_result);
+ 	var_dump($check_info);
+ 	
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
 	}else{
