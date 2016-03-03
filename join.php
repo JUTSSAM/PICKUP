@@ -19,15 +19,19 @@ if (isset($_REQUEST['check'])) {
 	$stuid = $_REQUEST['stuid'];
 	$stuname = $_REQUEST['stuname'];
 	$keyword = $_REQUEST['keyword'];
-
+	$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stuid."';",$con);
+	$repeat_info = mysql_fetch_array($result_repeat);
 	if($row){
 	    echo "请核对信息<br>";
 	    //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
 	    echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
-	    $result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
+	    if (!$repeat_info) {
+	    	 $result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ($stuid,'$stuname',$keyword);");
 		if ($result){
 	    	echo "签到成功！<br>";
 			}	
+	    }
+	   
 	}else{
 	    die( "输入有误，请核对重新输入<br>");
 	}

@@ -50,7 +50,16 @@
 			$repeat_info = mysql_fetch_array($result_repeat);
 
 			if ($repeat_info) {
-				die();	
+				$arr = array(
+				    	"code" => 3, 
+				    	//"msg" =>"点名成功，请核对信息：",
+				    	"obj" => array(
+				    		"tName" => $class_info[2] ,
+				    		"className" => $class_info[1]
+				    		)
+			    		);
+			    	$strr = json_encode($arr);	
+				echo $strr;
 			}
 
 			$result = mysql_query("INSERT INTO `stu`(`stuid`, `Stuname`, `keyword`) VALUES ('$stu2id','$stu2name',$keyword);");
