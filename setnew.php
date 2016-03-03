@@ -17,27 +17,16 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 
 	
 
-	// 
-	// $check_info = mysql_fetch_array($check_result);
-	// $check_info2 = mysql_fetch_array($check_result);
-	// $check_info3 = mysql_fetch_array($check_result);
-	//
-	// echo "<br>";
-	// var_dump($check_info2);
-	// echo "<br>";
-	// var_dump($check_info3);
-
 if (isset($_REQUEST['check'])) {
 
 	$classname = $_REQUEST['classname'];
 	$tname = $_REQUEST['tname'];
-	var_dump($classname);
-	var_dump($tname);
+	
 
 	@$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."' AND tname ='".$tname."';",$con);
-	var_dump($check_result);
+
 	@$check_info = mysql_fetch_array($check_result);
- 	var_dump($check_info);
+
  	$classid = $check_info['classid'];
  	if ($check_info) {
  		$classid = $classid + 1;
