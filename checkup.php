@@ -5,6 +5,8 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 	if (isset($_REQUEST['check'])) {
+		var_dump($_REQUEST['classname']);
+		var_dump($_REQUEST['classid']);
 		$consult_key = mysql_query("SELECT keyword FROM 'datas' WHERE classname = '".$_REQUEST['classname']."' and classid = '".$_REQUEST['classid']."';");
 		$result_keyword = mysql_fetch_array($consult_key);
 		var_dump($result_keyword);
