@@ -11,7 +11,7 @@
 		mysql_query("SELECT keyword FROM  `datas` WHERE classname =  '".$_REQUEST['classname']."' AND classid =".$_REQUEST['classid']);
 		$result_keyword = mysql_fetch_array($consult_key);
 		//var_dump($result_keyword);
-		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword=358848,$con);
+		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword=358848",$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
 		echo "<tr>";
