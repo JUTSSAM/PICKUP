@@ -18,9 +18,8 @@ $row = mysql_fetch_array($consult);
 $stuid = $_REQUEST['stuid'];
 $stuname = $_REQUEST['stuname'];
 $keyword = $_REQUEST['keyword'];
-
-if (isset($_REQUEST['check'])) {
-	# code...
+var_dump($stuname);
+if (isset($_REQUEST['check'])) {	# code...
 
 	if($row){
 	    echo "请核对信息<br>";
