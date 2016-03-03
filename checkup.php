@@ -10,7 +10,7 @@
 		$consult_key = //mysql_query("SELECT keyword FROM 'datas' WHERE classname = '".$_REQUEST['classname']."' AND classid = ".$_REQUEST['classid'].";");
 		mysql_query("SELECT keyword FROM  `datas` WHERE classname =  '".$_REQUEST['classname']."' AND classid =".$_REQUEST['classid']);
 		$result_keyword = mysql_fetch_array($consult_key);
-		echo $result_keyword['keyword'];
+		//echo $result_keyword['keyword'];
 		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword=".$result_keyword['keyword'],$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
