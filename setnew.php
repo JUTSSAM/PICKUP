@@ -35,15 +35,15 @@ if (isset($_REQUEST['check'])) {
 		
 	}
 
-	$check_result = mysql_query("SELECT `classname` FROM  `datas` WHERE 1;");
+	$check_result = mysql_query("SELECT DISTINCT`classname` FROM  `datas` WHERE 1;");
 	$check_info = mysql_fetch_array($check_result);
 	$check_info2 = mysql_fetch_array($check_result);
-	
+	$check_info3 = mysql_fetch_array($check_result);
 	var_dump($check_info);
 	echo "<br>";
 	var_dump($check_info2);
 	echo "<br>";
-
+	var_dump($check_info3);
 }
 ?>
 <!DOCTYPE html>
