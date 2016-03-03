@@ -34,10 +34,10 @@ if (isset($_REQUEST['check'])) {
 	var_dump($classname);
 	var_dump($tname);
 
-	$check_result = mysql_query("SELECT * FROM  `datas` WHERE classname = ".$classname." and tname =".$tname.";");
+	$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."'' and tname ='".$tname."';'");
 	$check_info = mysql_fetch_array($check_result);
  	var_dump($check_info);
- 	
+
 	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
 		die("不合法的输入<br>");
 	}else{
