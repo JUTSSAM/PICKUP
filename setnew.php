@@ -93,6 +93,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$keyword = rand(100000,999999);
 	$time = time();
 
+echo "hello world";
 	
 
 if (isset($_REQUEST['check'])) {
