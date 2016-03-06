@@ -16,12 +16,12 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$time = time();
 	
 
-if (isset($_REQUEST['check'])) {
+if (isset($_POST['check'])) {
 
 	echo "<div id='info'>";
 
-	$classname = $_REQUEST['classname'];
-	$tname = $_REQUEST['tname'];
+	$classname = $_POST['classname'];
+	$tname = $_POST['tname'];
 	
 
 	@$check_result = mysql_query("SELECT `classid` FROM  `datas` WHERE  classname = '".$classname."' AND tname ='".$tname."';",$con);
@@ -35,17 +35,17 @@ if (isset($_REQUEST['check'])) {
  		$classid = 1;
  	}
 
-	if(!StrCheck($_REQUEST['tname'])&&!StrCheck($_REQUEST['keyword'])&&!StrCheck($_REQUEST['class'])){
+	if(!StrCheck($_POST['tname'])&&!StrCheck($_POST['keyword'])&&!StrCheck($_POST['class'])){
 		die("不合法的输入<br>");
 	}else{
 
-		if(!$result = mysql_query("INSERT INTO datas (classname,tname,classid,keyword,datetime) VALUES ('$_REQUEST[classname]','$_REQUEST[tname]',$classid,'$keyword',$time);"))
+		if(!$result = mysql_query("INSERT INTO datas (classname,tname,classid,keyword,datetime) VALUES ('$_POST[classname]','$_POST[tname]',$classid,'$keyword',$time);"))
 		{
 			die('Error'.mysql_error().'<br>');
 		}else{
 			echo "发布信息如下：<br>";
-			echo "课程名称:".$_REQUEST['classname']."<br>";
-			echo "教师姓名:".$_REQUEST['tname']."<br>";
+			echo "课程名称:".$_POST['classname']."<br>";
+			echo "教师姓名:".$_POST['tname']."<br>";
 			echo "随机口令:".$keyword."<br>";
 			
 		}
