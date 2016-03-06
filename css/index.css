@@ -176,7 +176,6 @@ a:active {
 		width:318px;
 		height:340px;
 		text-align: center;
-		margin-top: -70px;
 	}
 	#f1{
 		margin-left:20px;
@@ -216,9 +215,9 @@ a:active {
     #footer span{
     	color:#aaa;
     }
-    #link #test{
-    	position: relative;
-    	top:-290px;
-    	left:70px;
+    #return{
+    	text-align: center;
+    	color:white;
+    	margin-top: -350px;
     }
 }

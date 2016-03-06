@@ -12,7 +12,7 @@ require_once 'config.php';
 $con = mysql_connect($_PICK[ 'db_server' ].':'.$_PICK['db_port'],$_PICK[ 'db_user' ],$_PICK[ 'db_password']);
 $db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 mysql_query("set names utf8");
-	echo "<div id='link'><span id='test'>";
+	echo "<div id='return'><span id='test'>";
 	$consult = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
 	$row = mysql_fetch_array($consult);
 	$stuid = $_POST['stuid'];
