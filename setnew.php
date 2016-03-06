@@ -19,6 +19,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 
 if (isset($_REQUEST['check'])) {
 
+	echo "<div id=\"info\">";
 	$classname = $_REQUEST['classname'];
 	$tname = $_REQUEST['tname'];
 	
@@ -50,6 +51,7 @@ if (isset($_REQUEST['check'])) {
 		}
 		
 	}
+	echo "</div>";
 }
 ?>
 
@@ -61,7 +63,7 @@ if (isset($_REQUEST['check'])) {
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 	<meta http-equiv="content-type" content="text/html" /><meta charset="utf-8" />
 	<link href="images/dmsj.ico" type="image/x-icon" rel="shortcut icon" />
-	<title>点名时间到</title>
+	<title>点名时间</title>
 	<link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
