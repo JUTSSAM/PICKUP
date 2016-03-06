@@ -21,7 +21,9 @@ if (isset($_REQUEST['check'])) {
 	$keyword = $_REQUEST['keyword'];
 	$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stuid."';",$con);
 	$repeat_info = mysql_fetch_array($result_repeat);
+	echo "<div id=\"info\">";
 	if($row){
+		
 	    echo "请核对信息<br>";
 	    //echo $row[0]."|".$row[1]."|".$row[2]."<br>";
 	    echo "课程名称：".$row[1]."<br>"."教师姓名：".$row[2]."<br>";
@@ -35,6 +37,7 @@ if (isset($_REQUEST['check'])) {
 	}else{
 	    die( "输入有误，请核对重新输入<br>");
 	}
+	echo "</div>";
 }
 ?>
 
@@ -145,3 +148,5 @@ if (isset($_REQUEST['check'])) {
 <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
+
+
