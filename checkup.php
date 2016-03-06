@@ -28,26 +28,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>查询点名情况</title>
-</head>
-<body>
-
-	<form action="?check" method="post">
-		
-		课程名称:<input type="text" name="classname"><br>
-		课程节次:<input type="text" name="classid"><br>
-        	<!--口令:<input type="text" name="keyword"><br>-->
-		<input type="submit" value="提交"><br>
-		
-	</form>
-	
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	<meta http-equiv="content-type" content="text/html" /><meta charset="utf-8" />
 	<link href="images/dmsj.ico" type="image/x-icon" rel="shortcut icon" />
@@ -148,7 +128,7 @@
 		<input type="submit" value="提交"><br>
 		
 	</form>
-	
+
 	</div> 
 	<div id="footer">
 		<span>本系统由物光院开发</span>
