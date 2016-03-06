@@ -5,12 +5,12 @@
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
 		echo "<div id='link'><span id='test'>";
-		var_dump($_POST['classname']);
-		var_dump($_POST['classid']);
+		// var_dump($_POST['classname']);
+		// var_dump($_POST['classid']);
 		$consult_key = mysql_query("SELECT keyword FROM  `datas` WHERE classname =  '".$_POST['classname']."' AND classid =".$_POST['classid']);
-		var_dump($consult_key);
+		// var_dump($consult_key);
 		$result_keyword = mysql_fetch_array($consult_key);
-		var_dump($result_keyword['keyword']);
+		// var_dump($result_keyword['keyword']);
 		$consult = mysql_query("SELECT DISTINCT stuid,stuname FROM `stu` where keyword=".$result_keyword['keyword'],$con);
 		echo "到课信息如下：<br>";
 		while ( $result = mysql_fetch_array($consult)) {
