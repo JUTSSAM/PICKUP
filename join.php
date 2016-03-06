@@ -13,7 +13,7 @@ $con = mysql_connect($_PICK[ 'db_server' ].':'.$_PICK['db_port'],$_PICK[ 'db_use
 $db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 mysql_query("set names utf8");
 
-if (isset($_POST['check'])) {
+if (isset($_POST)) {
 	echo "<div id=\"info\">";
 	$consult = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_POST['keyword']."'",$con);
 	$row = mysql_fetch_array($consult);
