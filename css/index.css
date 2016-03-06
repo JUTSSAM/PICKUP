@@ -1,0 +1,224 @@
+#header{
+	font-size: 1.5em;
+	width:1000px;
+	margin:0 auto;
+	text-align: center;
+	background-color: white;
+}
+#logo{
+	color:black;
+}
+#container{
+	margin:0 auto;
+    width:1000px;
+	height:800px;
+	background-color: white;
+}
+#alltime{
+	text-decoration: none;
+	color:blue;
+}
+#news{
+	width:240px;
+	height:800px;
+	border:1px solid;
+	float: left;
+}
+#call{
+	width:755px;
+	height:800px;
+	border:1px solid;
+	float: left;
+	margin-left: 1px;
+	text-align: center;
+}
+#f1{
+	position: relative;
+	top:100px;
+}
+#catalog{
+	position: relative;
+    margin-right:0px;
+}
+h3{
+	cursor:pointer;
+	font-size: 1.5em;
+}
+li{
+	list-style:none;
+}
+a:link {
+	text-decoration: none;
+	color:red;
+}    
+a:visited {
+	color:#551A8B;
+} 
+a:hover {
+	color:green;
+	text-decoration: underline;
+}   
+a:active {
+	color:#0000FF;
+} 
+#submit{
+	width:60px;
+	height:30px;
+	background-color: white;
+}
+.code{
+    font-family: Georgia;
+    font-size: 25px;
+    color:#60B62E;
+    border:0;
+    padding:2px 3px;
+    background-color: #A6E22E;
+    letter-spacing:3px;
+    font-weight:bolder;
+}
+.registerpage1{
+    width:400px;
+    position: relative;
+    top:10px;
+    font-size: 2em;
+    left:160px;
+    border:2px solid;
+ } 
+.register{
+	background-color:#4693EC;width:130px;height:40px;font-size: 30px;font-family: 楷体;border-radius:5px;
+}
+.border{
+	width:300px;
+	height:36px;
+	border:2px solid;
+	border-color: blue;
+	border-radius:5px;
+}
+.Sex{
+	height:20px;
+	width:20px;
+}
+.checkText{
+	font-size: 15px;
+	color:red;
+}
+#pc_html{
+	position:relative;
+	top:-8px;
+}
+@media screen and (min-width: 768px){
+	#mobile{
+		display: none;
+	}
+}
+@media screen and (max-width: 768px){
+	#pc_html{
+		display: none;
+	}
+	body{
+		background-image: url(../images/bg.jpg) ;
+		background-size: cover;
+	}
+	#mobile{
+		width:318px;
+		height:450px;
+		margin:0 auto;
+		padding-top: 20px;
+		/*background-color: rgba(255,255,255,0.2);*/
+		border-radius: 5px;
+		/*background:gray;*/
+		text-align: center;
+	}
+	#mobile #header{
+		/*background: red;*/
+		width:318px;
+		height:66px;
+		/*border-bottom:2px solid #A0B1C4;*/
+		background-color: rgba(0,0,0,0);
+	}
+	#mobile #header span{
+		line-height: 66px;
+		font-size: 40px;
+		/*font-family: "楷体","宋体","微软雅黑";*/
+		color:#009DDA;
+		/*text-shadow: 2px 2px 2px #888888;*/
+		opacity: 0.6;
+	}
+	#mobile #content,#teacher,#checked{
+		width:318px;
+		height:300px;
+		/*background: green;*/
+		margin-top:30px;
+	}
+	#mobile #content input,#teacher input,#checked input{
+		width:220px;
+		height:40px;
+		border-radius: 5px;
+		font-size: 20px;
+		border:1px solid #839EC4 ;
+		opacity: 0.5;
+		padding-left: 8px;
+		transition: all 0.35s;
+	}
+	#mobile #content input:focus,#teacher input:focus,#checked input:focus{
+		opacity: 0.8;
+	}
+	#content  #submit{
+		width:250px;
+		height:40px;
+		font-size: 25px;
+		line-height: 30px;
+		color:#839EC4;
+		border:1px solid #839EC4 ;
+	}
+	#link{
+		/*background: red;*/
+		width:318px;
+		height:340px;
+		text-align: center;
+		margin-top: -70px;
+	}
+	#f1{
+		margin-left:20px;
+		margin-top: 90px;
+		margin-right:20px;
+		border-radius: 8px;
+		/*background-color:rgba(255,255,255,0.3);*/
+	}
+	#link img{
+		border:1px solid #DFDFDF;
+		border-radius: 3px;
+		opacity: 0.6;
+	}
+    #stu{
+    	margin-top:20px;
+    }
+    #teacher button{
+    	width:220px;
+		height:40px;
+		border-radius: 5px;
+		font-size: 20px;
+		border:1px solid #839EC4 ;
+		background: #96BEFF;
+		opacity: 0.5;
+    }
+    #word{
+    	font-size: 24px;
+    	line-height:60px;
+    	font-family:"宋体";
+		color:#389E91;
+		position: relative;
+		top:-35px;
+    }
+    #test{
+    	font-size: 30px;
+    }
+    #footer span{
+    	color:#aaa;
+    }
+    #link #test{
+    	position: relative;
+    	top:-290px;
+    	left:70px;
+    }
+}
