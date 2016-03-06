@@ -96,6 +96,8 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 
 if (isset($_REQUEST['check'])) {
 
+	echo "<div id='info'>";
+
 	$classname = $_REQUEST['classname'];
 	$tname = $_REQUEST['tname'];
 	
@@ -127,6 +129,7 @@ if (isset($_REQUEST['check'])) {
 		}
 		
 	}
+	echo "</div>";
 }
 ?>
 
