@@ -37,26 +37,6 @@ if (isset($_REQUEST['check'])) {
 	}
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>加入一次课程</title>
-</head>
-<body>
-
-	<form action="?check" method="post">
-		
-		学号:<input type="text" name="stuid" ><br>
-		姓名:<input type="text" name="stuname"><br>
-        		口令:<input type="text" name="keyword"><br>
-		<input type="submit" value="提交"><br>
-		
-	</form>
-</body>
-</html>
-
-
 
 <!DOCTYPE html>
 <html>
