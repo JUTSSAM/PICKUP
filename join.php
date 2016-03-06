@@ -14,6 +14,7 @@ $db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 mysql_query("set names utf8");
 
 if (isset($_REQUEST['check'])) {
+	echo "<div id=\"info\">";
 	$consult = mysql_query("SELECT datetime,classname,tname  FROM `datas` WHERE keyword='".$_REQUEST['keyword']."'",$con);
 	$row = mysql_fetch_array($consult);
 	$stuid = $_REQUEST['stuid'];
@@ -21,7 +22,7 @@ if (isset($_REQUEST['check'])) {
 	$keyword = $_REQUEST['keyword'];
 	$result_repeat = mysql_query("SELECT *  FROM `stu` WHERE keyword='".$keyword."' and stuid ='".$stuid."';",$con);
 	$repeat_info = mysql_fetch_array($result_repeat);
-	echo "<div id=\"info\">";
+
 	if($row){
 		
 	    echo "请核对信息<br>";
