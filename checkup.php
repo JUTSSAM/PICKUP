@@ -1,6 +1,6 @@
 <?php
 	require_once 'config.php';
-	include"test.html";
+	//include"test.html";
 	$con = mysql_connect($_PICK[ 'db_server' ].':'.$_PICK['db_port'],$_PICK[ 'db_user' ],$_PICK[ 'db_password']);
 	$db_selected = mysql_select_db($_PICK[ 'db_database' ], $con);
 	mysql_query("set names utf8");
