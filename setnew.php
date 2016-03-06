@@ -136,7 +136,7 @@ if (isset($_REQUEST['check'])) {
 
 
 			</form>
-			<a href="checkup.html">查询点名情况</a>
+			<a href="checkup.php">查询点名情况</a>
 		</div> 
 	</div><br/>
 	<div style="text-align: center;">created by 秦至</div></div>
