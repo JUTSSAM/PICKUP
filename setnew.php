@@ -15,10 +15,7 @@ if(!@mysql_connect($_PICK['db_server'].':'.$_PICK['db_port'],$_PICK['db_user'],$
 	$keyword = rand(100000,999999);
 	$time = time();
 	
-
-if (isset($_POST['0'])) {
-
-	echo "<div id='info'>";
+	//echo "<div id='info'>";
 
 	$classname = $_POST['classname'];
 	$tname = $_POST['tname'];
@@ -51,6 +48,6 @@ if (isset($_POST['0'])) {
 		}
 		
 	}
-	echo "</div>";
+	//echo "</div>";
 }
 ?>
