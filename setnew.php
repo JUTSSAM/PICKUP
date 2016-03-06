@@ -152,7 +152,7 @@ if (isset($_REQUEST['check'])) {
 				<input type="text" name="classname" placeholder="课程姓名"><br/><br/>
 				<input type="submit" id="submit" value="提交"><br>
 			</form><br/>
-			<a href="checkup.html"><button>查询点名情况</button></a>
+			<a href="checkup.php"><button>查询点名情况</button></a>
 	</div> 
 	<div id="footer">
 		<span>本系统由物光院开发</span>
